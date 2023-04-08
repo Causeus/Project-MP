@@ -1,0 +1,93 @@
+#Main Activity 3
+package com.example.quis6apps;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity3 extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main3);
+    }
+
+    public void transaction(View view) {
+        Intent intent = new Intent(MainActivity3.this,MainActivity4.class);
+        startActivity(intent);
+    }
+}
+
+#xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_gravity="center"
+        android:text="Menu"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Produk - produk yang ada dalam ME(Mart Exclusive)"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:padding="20sp"/>
+
+    <TextView
+        android:text="Sajiku Serbaguna Rp. 5.000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:padding="20sp"/>
+
+    <TextView
+        android:text="Handuk Rp. 50.000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:padding="20sp"/>
+
+    <TextView
+        android:text="Meja Tv Rp. 250.000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:padding="20sp"/>
+
+    <TextView
+        android:text="Lemari Rp. 300.000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:padding="20sp"/>
+
+    <Button
+        android:id="@+id/transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Transaction"
+        android:onClick="transaction"/>
+
+
+
+</LinearLayout>
